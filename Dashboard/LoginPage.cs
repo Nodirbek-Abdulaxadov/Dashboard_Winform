@@ -24,9 +24,29 @@ namespace Dashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CheckUser();
+        }
+        private void username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                password.Focus();
+            }
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CheckUser();
+            }
+        }
+
+        private void CheckUser()
+        {
             if (username.Text == "Admin" && password.Text == "1234")
             {
-                Form1 form1 = new Form1();                
+                Form1 form1 = new Form1();
                 form1.Show();
                 this.Hide();
             }
@@ -35,5 +55,6 @@ namespace Dashboard
                 MessageBox.Show("Invalid username or password!");
             }
         }
+
     }
 }

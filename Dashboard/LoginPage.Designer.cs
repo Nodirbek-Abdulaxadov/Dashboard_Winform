@@ -86,6 +86,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(162, 33);
             this.username.TabIndex = 1;
+            this.username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_KeyDown);
             // 
             // password
             // 
@@ -96,6 +97,7 @@
             this.password.Size = new System.Drawing.Size(162, 33);
             this.password.TabIndex = 2;
             this.password.UseSystemPasswordChar = true;
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // pictureBox2
             // 
